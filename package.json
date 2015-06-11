@@ -1,0 +1,25 @@
+{
+  "name": "generator-wa",
+  "description": "Yeoman generator for web application",
+  "version": "0.0.0",
+  "keywords": [
+    "yeoman-generator",
+    "scaffold",
+    "web",
+    "application"
+  ],
+  "repository": "andrepolischuk/generator-wa",
+  "dependencies": {
+    "yeoman-generator": "^0.20.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "main": "app/index.js",
+  "scripts": {
+    "pretest": "rm -rf temp",
+    "test": "mocha"
+  },
+  "author": "Andrey Polischuk <andre.polischuk@gmail.com>",
+  "license": "MIT"
+}
