@@ -1,7 +1,7 @@
 {
   "name": "generator-wa",
   "description": "Yeoman generator for web application",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "keywords": [
     "yeoman-generator",
     "scaffold",
