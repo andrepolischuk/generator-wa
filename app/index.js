@@ -6,7 +6,7 @@ var yeoman = require('yeoman-generator');
 module.exports = yeoman.generators.Base.extend({
   initializing: function() {
     this.pkg = require('../package');
-    this.name = this.appname;
+    this.name = this.appname.replace(/\s/g, '-');
   },
 
   app: function() {
