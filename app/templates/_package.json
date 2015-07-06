@@ -16,7 +16,7 @@
   "scripts": {
     "prebuild": "rm -rf build && mkdir build",
     "build": "npm run build-js && npm run build-css",
-    "build-js": "browserify --transform babelify index.js > build/index.js",
+    "build-js": "browserify --transform [babelify --stage 0] index.js > build/index.js",
     "build-css": "postcss --use postcss-import index.css > build/index.css"
   },
   "author": "",
