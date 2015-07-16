@@ -7,6 +7,7 @@
 ```sh
 yo wa
    create package.json
+   create .editorconfig
    create .gitignore
    create index.css
    create index.html

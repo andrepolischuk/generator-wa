@@ -10,6 +10,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   app: function() {
+    this.copy('editorconfig', '.editorconfig');
     this.copy('gitignore', '.gitignore');
     this.template('index.css', 'index.css');
     this.template('index.html', 'index.html');

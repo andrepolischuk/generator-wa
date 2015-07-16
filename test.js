@@ -15,6 +15,7 @@ describe('wa', function() {
 
   it('should generate files', function() {
     assert.file([
+      '.editorconfig',
       '.gitignore',
       'index.css',
       'index.html',
