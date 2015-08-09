@@ -23,16 +23,20 @@ npm install --global generator-wa
 ## Usage
 
 ```sh
+mkdir awesome-app
+cd awesome-app
 yo wa
+git init
+git commit -am "Initial commit"
 ```
 
 ## License
 
   MIT
 
+[travis-url]: https://travis-ci.org/andrepolischuk/generator-wa
+[travis-image]: https://travis-ci.org/andrepolischuk/generator-wa.svg?branch=master
+
 [browserify]: https://github.com/substack/node-browserify
 [babelify]: https://github.com/babel/babelify
 [postcss]: https://github.com/postcss/postcss
-
-[travis-url]: https://travis-ci.org/andrepolischuk/generator-wa
-[travis-image]: https://travis-ci.org/andrepolischuk/generator-wa.svg?branch=master
