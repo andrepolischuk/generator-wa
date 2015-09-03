@@ -1,8 +1,8 @@
 # generator-wa [![Build Status][travis-image]][travis-url]
 
-  > Yeoman generator for web application
+> Yeoman generator for web application
 
-  Includes [postcss][postcss], [browserify][browserify] and [babel][babelify] for ES2015 syntax support
+Includes [postcss][postcss], [browserify][browserify] and [babel][babelify] for ES2015 syntax support
 
 ```sh
 yo wa
@@ -32,7 +32,7 @@ git commit -am "Initial commit"
 
 ## License
 
-  MIT
+MIT
 
 [travis-url]: https://travis-ci.org/andrepolischuk/generator-wa
 [travis-image]: https://travis-ci.org/andrepolischuk/generator-wa.svg?branch=master

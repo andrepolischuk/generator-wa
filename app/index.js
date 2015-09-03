@@ -2,12 +2,8 @@
 var yeoman = require('yeoman-generator');
 
 module.exports = yeoman.generators.Base.extend({
-  initializing: function() {
-    this.pkg = require('../package');
+  init: function() {
     this.name = this.appname.replace(/\s/g, '-');
-  },
-
-  app: function() {
     this.copy('editorconfig', '.editorconfig');
     this.copy('gitignore', '.gitignore');
     this.template('index.css', 'index.css');
