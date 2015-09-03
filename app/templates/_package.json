@@ -9,15 +9,17 @@
   "devDependencies": {
     "babelify": "^6.2.0",
     "browserify": "^11.0.1",
+    "mkdirp": "^0.5.1",
     "postcss": "^5.0.2",
     "postcss-cli": "^2.0.0",
-    "postcss-import": "^7.0.0"
+    "postcss-import": "^7.0.0",
+    "rimraf": "^2.4.3"
   },
   "scripts": {
-    "prebuild": "rm -rf build && mkdir build",
+    "prebuild": "rimraf build && mkdirp build",
     "build": "npm run build-js && npm run build-css",
-    "build-js": "browserify --transform [babelify --stage 0] index.js > build/index.js",
-    "build-css": "postcss --use postcss-import index.css > build/index.css"
+    "build-js": "browserify --transform [babelify --stage 0] index.js --outfile build/index.js",
+    "build-css": "postcss --use postcss-import index.css --output build/index.css"
   },
   "author": "",
   "license": "MIT"
