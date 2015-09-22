@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "babelify": "^6.2.0",
+    "browser-sync": "^2.9.5",
     "browserify": "^11.0.1",
     "chokidar-cli": "^1.0.1",
     "parallelshell": "^2.0.0",
@@ -23,7 +24,8 @@
     "build-css": "postcss --use postcss-import src/index.css --output build/index.css",
     "watch-js": "chokidar \"src/*.js\" --command \"npm run build-js\"",
     "watch-css": "chokidar \"src/*.css\" --command \"npm run build-css\"",
-    "start": "parallelshell \"npm run watch-js\" \"npm run watch-css\""
+    "sync": "browser-sync start --server --files \"*.html, build/*.*\"",
+    "start": "parallelshell \"npm run watch-js\" \"npm run watch-css\" \"npm run sync\""
   },
   "author": "",
   "license": "MIT"
