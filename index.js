@@ -1,8 +1,7 @@
-'use strict';
-var yeoman = require('yeoman-generator');
+import {Base} from 'yeoman-generator';
 
-module.exports = yeoman.generators.Base.extend({
-  init: function() {
+export default class WebApp extends Base {
+  init() {
     this.name = this.appname.replace(/\s/g, '-');
     this.copy('editorconfig', '.editorconfig');
     this.copy('gitignore', '.gitignore');
@@ -10,9 +9,9 @@ module.exports = yeoman.generators.Base.extend({
     this.copy('src/index.css', 'src/index.css');
     this.copy('src/index.js', 'src/index.js');
     this.template('_package.json', 'package.json');
-  },
+  }
 
-  install: function() {
+  install() {
     this.installDependencies({bower: false});
   }
-});
+};

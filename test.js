@@ -1,19 +1,17 @@
-'use strict';
-var test = require('ava');
-var assert = require('yeoman-generator').assert;
-var helpers = require('yeoman-generator').test;
-var join = require('path').join;
+import test from 'ava';
+import {assert, test as helpers} from 'yeoman-generator';
+import {join} from 'path';
 
-test.before(function (t) {
+test.before(t => {
   helpers.run(join(__dirname, './app'))
     .inDir(join(__dirname, './temp'))
     .withOptions({'skip-install': true})
-    .on('end', function () {
+    .on('end', () => {
       t.end();
     });
 });
 
-test('should generate files', function (t) {
+test('should generate files', t => {
   assert.file([
     '.editorconfig',
     '.gitignore',
