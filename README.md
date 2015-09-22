@@ -9,9 +9,9 @@ yo wa
    create package.json
    create .editorconfig
    create .gitignore
-   create index.css
    create index.html
-   create index.js
+   create src/index.css
+   create src/index.js
 ```
 
 ## Install
