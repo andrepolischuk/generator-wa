@@ -15,9 +15,9 @@ describe('wa', function () {
     assert.file([
       '.editorconfig',
       '.gitignore',
-      'index.css',
+      'src/index.css',
+      'src/index.js',
       'index.html',
-      'index.js',
       'package.json'
     ]);
 
