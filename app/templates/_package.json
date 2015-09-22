@@ -11,7 +11,7 @@
     "browser-sync": "^2.9.5",
     "browserify": "^11.0.1",
     "chokidar-cli": "^1.0.1",
-    "parallelshell": "^2.0.0",
+    "npm-run-all": "^1.2.11",
     "postcss": "^5.0.2",
     "postcss-cli": "^2.0.0",
     "postcss-import": "^7.0.0",
@@ -19,13 +19,13 @@
   },
   "scripts": {
     "prebuild": "rimraf build/*",
-    "build": "npm run build-js && npm run build-css",
+    "build": "npm-run-all build-js build-css",
     "build-js": "browserify --transform [babelify --stage 0] src/index.js --outfile build/index.js",
     "build-css": "postcss --use postcss-import src/index.css --output build/index.css",
     "watch-js": "chokidar \"src/*.js\" --command \"npm run build-js\"",
     "watch-css": "chokidar \"src/*.css\" --command \"npm run build-css\"",
     "sync": "browser-sync start --server --files \"*.html, build/*.*\"",
-    "start": "parallelshell \"npm run watch-js\" \"npm run watch-css\" \"npm run sync\""
+    "start": "npm-run-all watch-js watch-css sync"
   },
   "author": "",
   "license": "MIT"
