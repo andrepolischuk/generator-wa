@@ -9,17 +9,21 @@
   "devDependencies": {
     "babelify": "^6.2.0",
     "browserify": "^11.0.1",
-    "mkdirp": "^0.5.1",
+    "chokidar-cli": "^1.0.1",
+    "parallelshell": "^2.0.0",
     "postcss": "^5.0.2",
     "postcss-cli": "^2.0.0",
     "postcss-import": "^7.0.0",
     "rimraf": "^2.4.3"
   },
   "scripts": {
-    "prebuild": "rimraf build && mkdirp build",
+    "prebuild": "rimraf build/*",
     "build": "npm run build-js && npm run build-css",
     "build-js": "browserify --transform [babelify --stage 0] src/index.js --outfile build/index.js",
-    "build-css": "postcss --use postcss-import src/index.css --output build/index.css"
+    "build-css": "postcss --use postcss-import src/index.css --output build/index.css",
+    "watch-js": "chokidar \"src/*.js\" --command \"npm run build-js\"",
+    "watch-css": "chokidar \"src/*.css\" --command \"npm run build-css\"",
+    "start": "parallelshell \"npm run watch-js\" \"npm run watch-css\""
   },
   "author": "",
   "license": "MIT"
