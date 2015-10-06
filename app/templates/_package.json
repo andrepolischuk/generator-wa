@@ -25,7 +25,7 @@
     "watch:js": "chokidar \"src/*.js\" --command \"npm run build:js\"",
     "watch:css": "chokidar \"src/*.css\" --command \"npm run build:css\"",
     "sync": "browser-sync start --server --files \"*.html, build/*.*\"",
-    "start": "npm-run-all watch:js watch:css sync"
+    "start": "npm-run-all --parallel watch:js watch:css sync"
   },
   "author": "",
   "license": "MIT"
