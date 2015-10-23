@@ -11,6 +11,7 @@
     "browser-sync": "^2.9.5",
     "browserify": "^11.0.1",
     "chokidar-cli": "^1.0.1",
+    "mkdirp": "^0.5.1",
     "npm-run-all": "^1.2.11",
     "postcss": "^5.0.2",
     "postcss-cli": "^2.0.0",
@@ -18,7 +19,7 @@
     "rimraf": "^2.4.3"
   },
   "scripts": {
-    "prebuild": "rimraf build/*",
+    "prebuild": "rimraf build/* && mkdirp build",
     "build": "npm-run-all build:js build:css",
     "build:js": "browserify --transform [babelify --stage 0] src/index.js --outfile build/index.js",
     "build:css": "postcss --use postcss-import src/index.css --output build/index.css",
