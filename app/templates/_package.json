@@ -26,6 +26,7 @@
     "watch:js": "chokidar \"src/*.js\" --command \"npm run build:js\"",
     "watch:css": "chokidar \"src/*.css\" --command \"npm run build:css\"",
     "sync": "browser-sync start --server --files \"*.html, build/*.*\"",
+    "prestart": "npm run build",
     "start": "npm-run-all --parallel watch:js watch:css sync"
   },
   "author": "",
